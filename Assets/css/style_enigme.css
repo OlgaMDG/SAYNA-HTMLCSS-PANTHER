@@ -1,27 +1,39 @@
-/*------------------Fonts---------------*/
+/* --------------fonts----------------*/
 @font-face {
-    font-family: 'panthera';
-    src: url(../font/panthera/panthera.otf);
-}
-@font-face {
-    font-family:'BEYNO';
-    src: url(../font/beyno/BEYNO.otf);
-    src: url(../font/beyno/BEYNO.ttf);
-}
-@font-face {
-    font-family: 'Wakanda forever';
-    src: url(../font/Wakanda-forever/WakandaForever-Regular.ttf);
-}
-@font-face {
-    font-family: 'Cantarell';
-    src: url(../font/cantarell/Cantarell-Bold.ttf);
-    src: url(../font/cantarell/Cantarell-BoldItalic.ttf);
-    src: url(../font/cantarell/Cantarell-Italic.ttf);
-    src: url(../font/cantarell/Cantarell-Italic.ttf);
-    src: url(../font/cantarell/OFL.txt);
+    font-family: 'Wakanda Forever';
+    src: url(../police/Wakanda-forever/WakandaForever-Regular.ttf);
+    font-weight: normal;
 }
 
-/*------------------Variable de couleur---------------*/
+@font-face {
+    font-family: 'Panthera';
+    src: url(../police/panthera/panthera.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Beyno';
+    src: url(../police/beyno/BEYNO.otf),
+        url(../police/beyno/BEYNO.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Cantarell';
+    src: url(../police/cantarell/Cantarell-Regular.ttf);
+    font-weight: normal;
+}
+
+/*@font-face {
+    font-family: 'Cantarell';
+    src: url(../font/Cantarell/Cantarell-Bold.ttf);
+    font-weight: bold;
+}*/
+nav li{
+    list-style-type: none;
+}
+
+/*--------------Variable de couleur-----------*/
 :root{
     --white-color:#FFFFFF;
     --purple-one:#F2CEF2;
@@ -30,19 +42,45 @@
     --blue-one:#3D2DA6;
     --blue-two:#07338C;
     --blue-three:#021740;
-}
+    }
 
-/*------------------Uniformiser la page---------------*/
-*{
+/* --------------le site------------ */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-input{
-    color: var(--white-color); 
+html {
+    background: url(../Illustrations+Logo/All_pages/arrière_plan.png);
+    color: white;
 }
- /*fade in de tous les élément du site*/
- @keyframes fade-in {
+h1 {
+    font-family: 'Beyno';
+    font-size: 45px;/* je n'ai pas fait à 68px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+    font-weight: normal;
+    color: var(--purple-two);
+}
+h2 {
+    font-family: 'Wakanda forever';
+    font-size: 25px;/* je n'ai pas fait à 32px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+    font-weight: normal;
+    color: var(--purple-two)
+}
+p{
+    font-family: 'Cantarell';
+    font-size: 10px;/* je n'ai pas fait à 16px comme dans l'énoncé parceque vous avez dit sur le canal"help qu'il faut suivre la forme de la maquette*/
+}
+.plus {
+    font-family: 'Cantarell';
+    font-size: 10px;
+    color:var(--white-color);
+    font-weight: normal;
+    /*line-height: 1.5;*/
+}
+
+
+/*fade in de tous les élément du site*/
+@keyframes fade-in {
     from {
       opacity: 0;
       transform: translateX(-100px);
@@ -55,59 +93,80 @@ input{
   .fade-in{
     animation: fade-in 1s ease-in-out;
   }
-/*------------------Typographie---------------*/
-h1{
-    font-family: 'panthera';
-    font-size: 68px;
-}
-
-/*------------------Header---------------*/
-
-header{
+  body{
     background-image: linear-gradient(to right, black, var(--blue-three));
 }
-.logo-header{
-    background: url(../Illustrations+Logo/Enigme/Pantherenigme2.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain; 
-}
+
+/* --------------section Accueil------------ */
+/* partie header */
+    /*des barres horizontaux*/
+
 header .container{
     width:100%;
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
 }
-/*logo en couleur violet*/
-.logo{
-    display: flex;
+header{
+    padding-top: 20px;
 }
-.logo:hover{
+    /*logo en blanc*/
+.blanc:hover{
+    filter: brightness(200%);
+}
+.left-bar{
+    border: 1px solid var(--purple-two);
+    height: 457px;
+    width: 2px;
+    position: fixed;
+    left: 40px;
+}
+.rigth-bar{
+    border: 1px solid var(--purple-two);
+    height: 340px;
+    width: 2px;
+    position: fixed;
+    left: 55px;
+}
+.reso-socio{
+    width: 2px;
+    height: 2px;
+    position: fixed;
+    left: 50px;
+    top:347px;
+    display: inherit;
+}
+.reso-socio img{
+    width: 15px;
+    margin-top: 10px;
+    height: 15px;
+}
+.logo-entete{
+  z-index: 1;
+}
+.logo-entete:hover{
     cursor: pointer;
     filter: invert(66%) sepia(88%) saturate(1004%) hue-rotate(265deg) brightness(106%) contrast(87%);
 }
-
-nav ul{
+.entete {
     display: flex;
+    justify-content: space-between;
 }
-header nav{
-    float: right;
-    font-family: 'BEYNO';
-    font-size: 15px;
-    font-weight: 500;
+
+.nav-menu {
+    width: 30%;
 }
-ul{
-    list-style: none;
+
+.entete .nav-menu ul {
+    display: flex;
+    justify-content: space-between;
 }
-ul a{
+header li a{
     text-decoration: none;
     color: var(--white-color);
-    padding: 20px 30px 0px 20px;
 }
-ul a:hover{
-    cursor: pointer;
+header li a:hover{
     text-decoration: underline;
-    text-decoration-color: white;
+    text-decoration-color: var(--white-color);
 }
 ul a.active{
     color:var(--purple-two);
@@ -185,10 +244,10 @@ main{
 
 }
 .so-description-texte .p1{
-    margin-bottom: -27px;
+    margin-bottom: -35px;
 }
 .so-description-texte .p2{
-    margin-bottom: 27px;
+    margin-bottom: 35px;
     padding-bottom: 20%;
 }
 
@@ -268,12 +327,107 @@ button{
 button:hover{
     box-shadow: 0 0 20px #F2CEF2;
 }
+.section-two{
+padding-bottom: 10px;
+}
 
-/*Footer*/
+/* -------------Footer-----------  */
+footer {
+    background: url(../illustrations+Logo/All-pages/back_footer.png);
+    width: 100%;
+    height: 500px;
+    display: flex;
+    padding: 140px 0 50px 0;
+
+}
+
+footer .logo-foot-container {
+    background: url(../Illustrations+Logo/All_pages/footer1.png) no-repeat;
+    background-size: contain;
+    background-size: 40%;
+    background-position: 70% 10px;
+    flex: 0.8;
+}
+footer .logo-foot-container>div {
+    position: relative;
+    top: 40%;
+    left: 50%;
+
+}
+footer .container-text {
+    flex: 1.2;
+    display: grid;
+    grid-template-areas: 'page social social'
+        'foot foot foot';
+}
+
+footer .about {
+    grid-area: page;
+}
+
+footer .social {
+    grid-area: social;
+}
+
+footer .social .marge {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+footer .text-foot {
+    grid-area: foot;
+    display: flex;
+}
+.cercle{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--purple-three);
+    margin: 4px 10px;
+  }
+footer{
+    background-image: url(../Illustrations+Logo/All_pages/back_footer.png);
+}
+footer li, footer p {
+    font-size: calc(0.5rem + 0.5vw);
+    margin: 10px;
+}
+
+footer ul {
+    margin-top: 10px;
+}
+
+footer li, footer h2, footer p {
+    font-family: "Cantarell";
+    color: var(--white-color);
+
+}
+
+footer h2 {
+    padding: 5px 0 10px 5px;
+    font-size: calc(0.8rem + 0.6vw);
+    letter-spacing: 4px;
+}
+
+.logo-foot {
+    transition: transform 0.3s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+.page{
+    text-decoration: none;
+    color: var(--white-color);
+}
+.page:hover{
+    text-decoration: underline;
+    text-decoration-color: var(white);
+}
+
 footer{
     background-image: url('../Illustrations+Logo/All_pages/back_footer.png');
     width: 100%;
-    height: 100vh;
 }
 .footer-content{
     display: flex;
@@ -288,120 +442,34 @@ footer div{
 .right-up{
     display: flex;
     justify-content: space-around;
-    padding-top: 240px;
     font-family: 'Cantarell';
     font-weight: 100;
 }
 .footer-content-right{
     color: var(--white-color);
 }
-img.img2 {
+img.img23 {
     padding-top: 131px;
-    padding-left: 74px;
+    padding-left: 76px;
 }
-
 .footer-content-left{
     position: relative;
-    background-image: url(../Illustrations+Logo/All_pages/);
+    background-image: url('../Illustrations+Logo/All_pages/footer1.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
     width: 300px;
     height: 300px;
-    margin: 243px 1px 10px 150px;
+    margin: 3px 60px 10px 200px;
   }
-  .img2 {
-    transition: transform 0.3s;
-}
-.img2:hover {
-    transform: scale(1.1);
-}
-
 .logo-sociaux {
     text-align: center;
+    width: 100%;
+    margin: 5px auto;
     justify-content: space-between;
-    margin: 20px;
 }
-.logo-sociaux .fb{
-    background-color: var(--purple-one);
-    border-radius: 25px;
-    padding: 15px 10px 6px 8px;
-    margin: 5px;
-}
-
-.logo-sociaux .ig{
-    background-color: var(--purple-three);
-    border-radius: 25px;
-    padding: 15px 10px 6px 8px;
-    border-radius: 20px;
-    margin: 5px;
-}
-.logo-sociaux .tw{
-    background-color: var(--blue-one);
-    border-radius: 20px;
-    padding: 15px 10px 6px 8px;
-    margin: 5px;
-}
-.logo-sociaux .tk{
-    background-color: var(--blue-two);
-    border-radius: 20px;
-    padding: 15px 10px 6px 8px;
-    border-radius: 20px;
-    margin: 5px;
-}
-
-/*zoomer les logos*/
-.logo-sociaux{
-    transition: transform 0.3s;
-}
-
-.zoom:hover {
-    transform: scale(1.1);
-}
-.fb {
-    transition: transform 0.3s;
-}
-
-.fb:hover {
-    transform: scale(1.1);
-}
-.logo-sociaux a.fb{
-    padding: 15px 0px 6px 0px;
-   background-color: transparent;
-
-}
-.ig {
-    transition: transform 0.3s;
-}
-
-.ig:hover {
-    transform: scale(1.1);
-}
-.logo-sociaux a.ig{
-    padding: 15px 0px 6px 0px;
-    background-color: transparent;
-}
-.tw {
-    transition: transform 0.3s;
-}
-
-.tw:hover {
-    transform: scale(1.1);
-}
-.logo-sociaux a.tw{
-    padding: 15px 0px 6px 0px;
-    background-color: transparent;
-}
-.tk {
-    transition: transform 0.3s;
-}
-
-.tk:hover {
-    transform: scale(1.1);
-}
-.logo-sociaux a.tk{
-    padding: 15px 0px 6px 0px;
-    background-color: transparent;
+.logo-sociaux a{
+    margin: 10px 5px;
 }
 
 .rigth-propos h3{
@@ -419,6 +487,7 @@ img.img2 {
 .copyright{
     font-size: 10px;
     display: flex;
+    margin-bottom: 20px;
 }
 .cercle{
   width: 5px;
@@ -429,7 +498,7 @@ img.img2 {
 }
 .footer-content-right h3{
     font-size: 22px;
-    letter-spacing: 28%;
+    letter-spacing: 0.28em;
 }
 .rigth-propos a{
     text-decoration: none;
@@ -438,9 +507,26 @@ img.img2 {
 }
 .rigth-propos a:hover{
     text-decoration: underline;
-    text-decoration-color: var(white);
+    text-decoration-color: var(--white-color);
 }
 
+/*zoomer les logos*/
+.logo-sociaux{
+    transition: transform 0.3s;
+}
+.zoom{
+    z-index: 1;
+
+}
+.zoom:hover {
+    transform: scale(1.1);
+}
+.img2 {
+    transition: transform 0.3s;
+}
+.img2:hover {
+    transform: scale(1.1);
+}
 
 /*responsive dans un écran de téléphone moins de 500px de largeur*/
 @media (max-width: 500px) {
