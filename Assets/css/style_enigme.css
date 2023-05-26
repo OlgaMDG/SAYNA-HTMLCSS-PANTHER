@@ -1,0 +1,503 @@
+/*------------------Fonts---------------*/
+@font-face {
+    font-family: 'panthera';
+    src: url(../font/panthera/panthera.otf);
+}
+@font-face {
+    font-family:'BEYNO';
+    src: url(../font/beyno/BEYNO.otf);
+    src: url(../font/beyno/BEYNO.ttf);
+}
+@font-face {
+    font-family: 'Wakanda forever';
+    src: url(../font/Wakanda-forever/WakandaForever-Regular.ttf);
+}
+@font-face {
+    font-family: 'Cantarell';
+    src: url(../font/cantarell/Cantarell-Bold.ttf);
+    src: url(../font/cantarell/Cantarell-BoldItalic.ttf);
+    src: url(../font/cantarell/Cantarell-Italic.ttf);
+    src: url(../font/cantarell/Cantarell-Italic.ttf);
+    src: url(../font/cantarell/OFL.txt);
+}
+
+/*------------------Variable de couleur---------------*/
+:root{
+    --white-color:#FFFFFF;
+    --purple-one:#F2CEF2;
+    --purple-two:#9E91B7;
+    --purple-three:#DF99F2;
+    --blue-one:#3D2DA6;
+    --blue-two:#07338C;
+    --blue-three:#021740;
+}
+
+/*------------------Uniformiser la page---------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input{
+    color: var(--white-color); 
+}
+ /*fade in de tous les élément du site*/
+ @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }   
+  .fade-in{
+    animation: fade-in 1s ease-in-out;
+  }
+/*------------------Typographie---------------*/
+h1{
+    font-family: 'panthera';
+    font-size: 68px;
+}
+
+/*------------------Header---------------*/
+
+header{
+    background-image: linear-gradient(to right, black, var(--blue-three));
+}
+.logo-header{
+    background: url(../Illustrations+Logo/Enigme/Pantherenigme2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; 
+}
+header .container{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+/*logo en couleur violet*/
+.logo{
+    display: flex;
+}
+.logo:hover{
+    cursor: pointer;
+    filter: invert(66%) sepia(88%) saturate(1004%) hue-rotate(265deg) brightness(106%) contrast(87%);
+}
+
+nav ul{
+    display: flex;
+}
+header nav{
+    float: right;
+    font-family: 'BEYNO';
+    font-size: 15px;
+    font-weight: 500;
+}
+ul{
+    list-style: none;
+}
+ul a{
+    text-decoration: none;
+    color: var(--white-color);
+    padding: 20px 30px 0px 20px;
+}
+ul a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+ul a.active{
+    color:var(--purple-two);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*------------------section-one---------------*/
+.container{
+    width:80%;
+    margin: 0 auto;
+    display: flex;
+}
+.section-one {
+    padding-top: 50px;
+}
+.logo-header a {
+    position: relative;
+    z-index: 2;
+  }
+main{
+    background-image: linear-gradient(to right, black, var(--blue-three));
+}
+.horizontal{
+    display: grid;
+    grid-template-columns: auto auto ;
+  }
+  
+.section-one-img img{
+   width: 100%;
+   transform: scale(1.9);
+    padding-left: 10%;
+}
+
+.section-one-description{
+    display: grid;
+    grid-template-areas: 'myArea myArea';
+    padding-left: 20%;
+    padding-right: 5%;
+}
+.item {
+    grid-area: myArea;
+    width: 75%;
+    justify-content: justify;
+    text-align: justify;
+  }
+.so-description-titre{
+    padding-top: 15%;
+    font-family: 'BEYNO';
+    font-size: 32px;
+    color:var(--purple-two);
+
+}
+.so-description-texte{
+    background: url(../Illustrations+Logo/Enigme/Pantherenigme2.png);
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: contain; 
+    overflow: hidden;
+    padding-top: 12%;
+    margin-top: 60%;
+    margin-left: 20%;
+    font-size: 10px;
+    width: 50%;
+    transform: scale(1.7);
+    font-family: 'Cantarell';
+    color: var(--white-color);
+    padding-bottom: -20%;
+    border-bottom: 1px solid transparent; 
+    border-image: linear-gradient(to right,var(--blue-one), var(--blue-three)) 1; 
+}
+.so-description-texte div{
+    transform: scale(0.60); 
+    padding: 0;
+
+}
+.so-description-texte .p1{
+    margin-bottom: -27px;
+}
+.so-description-texte .p2{
+    margin-bottom: 27px;
+    padding-bottom: 20%;
+}
+
+
+/*------------------section-two---------------*/
+
+.column-left{
+    width: 100%;
+}
+.column-right{
+    background: url(../Illustrations+Logo/Enigme/Pantherenigme2.png);
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: contain; 
+    padding-top: 26%;
+    margin-right: 7%;
+    margin-top: 10%;
+    font-size: 10px;
+    width: 40%;
+    transform: scale(1.7);
+    font-family: 'Cantarell';
+    color: var(--white-color);
+}
+.column-right p{
+    transform: scale(0.60); 
+    padding: 0;
+}
+
+  .rw { 
+    margin-bottom: 10px;
+  }
+  .row-citation{
+        font-family: 'Wakanda forever';
+        color: var(--purple-two);
+        font-size: 20px;
+        width: 60%;
+        padding-top: 15%;
+  }
+  .row-transcript{
+    color: var(--white-color);
+    width: 30%;
+    font-family: 'Cantarell';
+    font-size: 10px;
+    padding-top: 5%;
+  }
+  .row-transcript p span{
+        font-family: 'Wakanda forever';
+  }
+  .row-transcript p {
+    padding: 10px 0px;
+  }
+.row-formulaire{
+    color: var(--white-color);
+    padding-top: 10%;
+}
+.row-formulaire p{
+    padding: 15px 0px;
+}
+.row-formulaire input[type='text']{
+    border:none;
+    background-color: transparent;
+    border: 1px solid var(--white-color);
+    width: 520px;
+    height: 56px;
+    border-radius: 38px;
+    padding-left: 40px;
+}
+button{
+    width: 174px;
+    height: 54px;
+    border-radius: 38px;
+    background-color:  #F2CEF2;
+    margin: 0 auto;
+    cursor: pointer;
+    margin: 60px 174px;
+}
+button:hover{
+    box-shadow: 0 0 20px #F2CEF2;
+}
+
+/*Footer*/
+footer{
+    background-image: url('../Illustrations+Logo/All_pages/back_footer.png');
+    width: 100%;
+    height: 100vh;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-content-right{
+    display: grid;
+}
+footer div{
+    border: 2px solid transparent;
+}
+.right-up{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 240px;
+    font-family: 'Cantarell';
+    font-weight: 100;
+}
+.footer-content-right{
+    color: var(--white-color);
+}
+img.img2 {
+    padding-top: 131px;
+    padding-left: 74px;
+}
+
+.footer-content-left{
+    position: relative;
+    background-image: url(../Illustrations+Logo/All_pages/);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    margin: 243px 1px 10px 150px;
+  }
+  .img2 {
+    transition: transform 0.3s;
+}
+.img2:hover {
+    transform: scale(1.1);
+}
+
+.logo-sociaux {
+    text-align: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+.logo-sociaux .fb{
+    background-color: var(--purple-one);
+    border-radius: 25px;
+    padding: 15px 10px 6px 8px;
+    margin: 5px;
+}
+
+.logo-sociaux .ig{
+    background-color: var(--purple-three);
+    border-radius: 25px;
+    padding: 15px 10px 6px 8px;
+    border-radius: 20px;
+    margin: 5px;
+}
+.logo-sociaux .tw{
+    background-color: var(--blue-one);
+    border-radius: 20px;
+    padding: 15px 10px 6px 8px;
+    margin: 5px;
+}
+.logo-sociaux .tk{
+    background-color: var(--blue-two);
+    border-radius: 20px;
+    padding: 15px 10px 6px 8px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+/*zoomer les logos*/
+.logo-sociaux{
+    transition: transform 0.3s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+.fb {
+    transition: transform 0.3s;
+}
+
+.fb:hover {
+    transform: scale(1.1);
+}
+.logo-sociaux a.fb{
+    padding: 15px 0px 6px 0px;
+   background-color: transparent;
+
+}
+.ig {
+    transition: transform 0.3s;
+}
+
+.ig:hover {
+    transform: scale(1.1);
+}
+.logo-sociaux a.ig{
+    padding: 15px 0px 6px 0px;
+    background-color: transparent;
+}
+.tw {
+    transition: transform 0.3s;
+}
+
+.tw:hover {
+    transform: scale(1.1);
+}
+.logo-sociaux a.tw{
+    padding: 15px 0px 6px 0px;
+    background-color: transparent;
+}
+.tk {
+    transition: transform 0.3s;
+}
+
+.tk:hover {
+    transform: scale(1.1);
+}
+.logo-sociaux a.tk{
+    padding: 15px 0px 6px 0px;
+    background-color: transparent;
+}
+
+.rigth-propos h3{
+    padding-right: 200px ;
+}
+.right-sociaux h3{
+    padding-left: 35px;
+}
+.rigth-propos p{
+    padding-top: 20px;
+}
+.rigth-propos .p2{
+    padding-top: 10px;
+}
+.copyright{
+    font-size: 10px;
+    display: flex;
+}
+.cercle{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--purple-three);
+  margin: 4px 10px;
+}
+.footer-content-right h3{
+    font-size: 22px;
+    letter-spacing: 28%;
+}
+.rigth-propos a{
+    text-decoration: none;
+    color:var(--white-color);
+    cursor: pointer;
+}
+.rigth-propos a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(white);
+}
+
+
+/*responsive dans un écran de téléphone moins de 500px de largeur*/
+@media (max-width: 500px) {
+    .section-one-img{
+        display: none;
+    }
+    .so-description-titre{
+        padding-top: 15%;
+        font-family: 'BEYNO';
+        font-size: 20px;
+        text-align: justify;
+        justify-content: center;
+        width: 90%;
+    }
+    .so-description-texte{
+        background: none;
+        width: 80%;
+        padding-top: 0px;
+        margin-bottom: -20px;
+        border-bottom: 1px solid transparent; 
+        border-image: linear-gradient(to right,var(--blue-one), var(--blue-three)) 1; 
+    }
+    .container{
+        display: block;
+    }
+    .row-citation{
+        font-size: 18px;
+        width: 100%;
+        padding-top: 25%;
+  }
+  .so-description-texte .p2{
+    margin-bottom: 0px;
+    padding-bottom: 60px;
+}
+.row-transcript{
+    width: 80%;
+    font-size: 10px;
+  }
+  .column-right{
+    background: none;
+    padding-top: 10%;
+    margin-top: -70%;
+    font-size: 10px;
+    width: 85%;
+    padding-bottom: 50%;
+}
+.row-formulaire{
+    padding-top: 15%;
+}
+.row-formulaire input[type='text']{
+    width:320px;
+    height: 50px;
+    padding-left: 20px;
+}
+button{
+    width: 125px;
+    height: 54px;
+    margin: 40px 100px;
+}
+}
