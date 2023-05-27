@@ -79,7 +79,7 @@ p{
 }
 
 
-/*fade in de tous les élément du site*/
+/*fade in*/
 @keyframes fade-in {
     from {
       opacity: 0;
@@ -97,7 +97,6 @@ p{
     background-image: linear-gradient(to right, black, var(--blue-three));
 }
 
-/* --------------section Accueil------------ */
 /* partie header */
     /*des barres horizontaux*/
 
@@ -110,39 +109,41 @@ header{
     padding-top: 20px;
 }
     /*logo en blanc*/
-.blanc:hover{
-    filter: brightness(200%);
-}
-.left-bar{
-    border: 1px solid var(--purple-two);
-    height: 457px;
-    width: 2px;
-    position: fixed;
-    left: 40px;
-}
-.rigth-bar{
-    border: 1px solid var(--purple-two);
-    height: 340px;
-    width: 2px;
-    position: fixed;
-    left: 55px;
-}
-.reso-socio{
-    width: 2px;
-    height: 2px;
-    position: fixed;
-    left: 50px;
-    top:347px;
-    display: inherit;
-}
-.reso-socio img{
-    width: 15px;
-    margin-top: 10px;
-    height: 15px;
-}
+    .blanc:hover{
+        filter: brightness(200%);
+    }
+    /*logo réseaux sociaux*/
+    .left-bar{
+        border: 1px solid var(--purple-two);
+        height: 457px;
+        width: 2px;
+        position: fixed;
+        left: 40px;
+    }
+    .rigth-bar{
+        border: 1px solid var(--purple-two);
+        height: 340px;
+        width: 2px;
+        position: fixed;
+        left: 55px;
+    }
+    .reso-socio{
+        width: 2px;
+        height: 2px;
+        position: fixed;
+        left: 50px;
+        top:347px;
+        display: inherit;
+    }
+    .reso-socio img{
+        width: 15px;
+        margin-top: 10px;
+        height: 15px;
+    }
 .logo-entete{
   z-index: 1;
 }
+    /*couleur violet du logo*/
 .logo-entete:hover{
     cursor: pointer;
     filter: invert(66%) sepia(88%) saturate(1004%) hue-rotate(265deg) brightness(106%) contrast(87%);
@@ -193,8 +194,8 @@ main{
 .horizontal{
     display: grid;
     grid-template-columns: auto auto ;
-  }
-  
+}
+ 
 .section-one-img img{
    width: 100%;
    transform: scale(1.9);
@@ -528,8 +529,20 @@ img.img23 {
     transform: scale(1.1);
 }
 
-/*responsive dans un écran de téléphone moins de 500px de largeur*/
+/*--------------Résponsive avec un écran moins de 500px-----------*/
 @media (max-width: 500px) {
+    /*header*/
+    .nav-menu ul{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        bottom: -50px;
+    }
+    .nav-menu li{
+        margin: 5px;
+    }
+
+    /*main*/
     .section-one-img{
         display: none;
     }
@@ -556,34 +569,108 @@ img.img23 {
         font-size: 18px;
         width: 100%;
         padding-top: 25%;
-  }
-  .so-description-texte .p2{
-    margin-bottom: 0px;
-    padding-bottom: 60px;
+    }
+    .so-description-texte .p2{
+        margin-bottom: 0px;
+        padding-bottom: 60px;
+    }
+    .row-transcript{
+        width: 80%;
+        font-size: 10px;
+    }
+    .column-right{
+        background: none;
+        padding-top: 10%;
+        margin-top: -70%;
+        font-size: 10px;
+        width: 85%;
+        padding-bottom: 50%;
+    }
+    .row-formulaire{
+        padding-top: 15%;
+    }
+    .row-formulaire input[type='text']{
+        width:320px;
+        height: 50px;
+        padding-left: 20px;
+    }
+    button{
+        width: 125px;
+        height: 54px;
+        margin: 40px 100px;
+    }
+
+    /*footer*/
+    .footer-content{
+        display: block;
+    }
+    .right-up{
+        display: block;
+    }
+    .right-sociaux h3{
+        padding-left: 0px;
+        text-align: left;
+        font-size: medium;
+    }
+    .rigth-propos h3{
+        font-size: medium;
+    }
+    .footer-content-left{
+        background-image: none;
+        margin: 0px;
+        width: 283px;
+        height: 0px;
+      }
+    .logo-sociaux {
+        text-align: center;
+        width: 100%;
+        margin: 2px auto;
+    }
+    .logo-sociaux a{
+        margin: 10px 5px;
+    }
+    img.img23 {
+        padding-top: 50px;
+        padding-left: 128px;
+    }
+    footer{
+        padding-top: -100px;
+    }
 }
-.row-transcript{
-    width: 80%;
-    font-size: 10px;
-  }
-  .column-right{
-    background: none;
-    padding-top: 10%;
-    margin-top: -70%;
-    font-size: 10px;
-    width: 85%;
-    padding-bottom: 50%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------Résponsive avec un écran moins de 500px-----------*/
+@media (max-width: 500px) {
+    
 }
-.row-formulaire{
-    padding-top: 15%;
-}
-.row-formulaire input[type='text']{
-    width:320px;
-    height: 50px;
-    padding-left: 20px;
-}
-button{
-    width: 125px;
-    height: 54px;
-    margin: 40px 100px;
-}
-}
+
